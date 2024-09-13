@@ -45,6 +45,10 @@ def factor(num):
 factor(1000)
 '''
 
+# Create a function that accepts 2 arguments. Find the greatest common factor between those numbers.
+def gcf(num1, num2):
+    pass
+
 '''
 # MadLibs
 # Request inputs
