@@ -45,11 +45,20 @@ def factor(num):
 factor(1000)
 '''
 
-# Create a function that accepts 2 arguments. Find the greatest common factor between those numbers.
-def gcf(num1, num2):
-    pass
-
 '''
+# Create a function that accepts 2 arguments. Find the greatest common factor between those numbers.
+def gcf(first_number, second_number):
+    maximum = max(first_number, second_number)
+    factors = []
+    for number in range(1, maximum + 1):
+        if first_number % number == 0 and second_number % number == 0:
+            factors.append(number)
+    print(factors[len(factors) - 1])
+
+gcf(20, 50)
+'''
+
+
 # MadLibs
 # Request inputs
 verb1 = input('Enter the first (present tense) verb: ')
@@ -72,4 +81,3 @@ In the span of just ten minutes, the entire neighborhood had been destroyed. The
 """
 
 print(madlib)
-'''
