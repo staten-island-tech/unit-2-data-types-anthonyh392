@@ -1,4 +1,23 @@
 '''
+# Tip calculator
+bill = float(input('What is the bill? '))
+tip = int(int(input('What is the tip (as a percentage)? ')) / 100 * bill)
+total_amount = bill + tip
+print(f'Your total is ${total_amount}.')
+'''
+
+'''
+# Using the "input" method in Python, ask a user to input a sentence. Then develop a function that accepts a the user input and will tell you how many words are in that string. First write out your plan using comments. Then craft the function.
+# Set the variable "sentence" to an input
+# Split the sentence into an array using a whitespace as a separator
+# Count the length of the array and print the length
+sentence = input('Enter a sentence: ')
+words = sentence.split(' ')
+length = len(words)
+print(f'Your sentence has {length} word(s).')
+'''
+
+'''
 # Create a function that determines if a function is odd or even.
 def odd_or_even(num):
     print(f'{num} is odd!' if num % 2 != 0 else f'{num} is even!')
@@ -48,16 +67,15 @@ factor(1000)
 '''
 # Create a function that accepts 2 arguments. Find the greatest common factor between those numbers.
 def gcf(first_number, second_number):
-    maximum = max(first_number, second_number)
+    minimum = min(first_number, second_number)
     factors = []
-    for number in range(1, maximum + 1):
+    for number in range(1, minimum + 1):
         if first_number % number == 0 and second_number % number == 0:
             factors.append(number)
     print(factors[len(factors) - 1])
 
 gcf(20, 50)
 '''
-
 
 # MadLibs
 # Request inputs
