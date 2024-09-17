@@ -7,6 +7,7 @@ os.system('cls')
 print('TIP CALCULATOR\n')
 bill = float(input('What is the bill? '))
 tip = int(int(input('What is the tip (as a percentage)? ')) / 100 * bill)
+
 total_amount = bill + tip
 print(f'Your total is ${total_amount}.')
 
@@ -19,7 +20,8 @@ os.system('cls')
 # Count the length of the array and print the length
 print('WORDS COUNTER\n')
 sentence = input('Enter a sentence: ')
-words = sentence.split(' ')
+
+words = sentence.strip().split(' ')
 length = len(words)
 print(f'Your sentence has {length} word(s).')
 
@@ -28,10 +30,11 @@ os.system('cls')
 
 # Create a function that determines if a function is odd or even.
 print('EVEN OR ODD\n')
+num = int(input('Enter a number: '))
+
 def odd_or_even(num):
     print(f'{num} is odd!' if num % 2 != 0 else f'{num} is even!')
 
-num = int(input('Enter a number: '))
 odd_or_even(num)
 
 time.sleep(3)
@@ -39,6 +42,9 @@ os.system('cls')
 
 # Create a function to accept a "bill" value and offer a tip of 0%, 15%, 20% or 25% depending on if the service was bad, okay, good, or great.
 print('SERVICE CALCULATOR\n')
+bill = float(input('Enter the bill: '))
+service = input('Was the service great, good, okay, or bad? ')
+
 def tip(bill, service):
     service = service.lower()
 
@@ -57,15 +63,17 @@ def tip(bill, service):
         print('Invalid bill!')
         return
     
-    print(f'You tipped {tip}! Your bill is now {bill}.')
+    print(f'You tipped {tip}! Your bill is now ${bill}.')
 
-tip(81.00, 'great')
+tip(bill, service)
 
 time.sleep(3)
 os.system('cls')
 
 # Create a function that accepts an input and determines all factors of the number.
 print('FACTORS OF A NUMBER\n')
+num = int(input('Enter a number: '))
+
 def factor(num):
     factors = []
     for i in range(1, num + 1):
@@ -74,13 +82,16 @@ def factor(num):
     
     print(f'The factors of {num} are: {', '.join(factors)}.')
 
-factor(1000)
+factor(num)
 
 time.sleep(3)
 os.system('cls')
 
 # Create a function that accepts 2 arguments. Find the greatest common factor between those numbers.
 print('GCF CALCULATOR\n')
+fn = int(input('Enter the first number: '))
+sn = int(input('Enter the second number: '))
+
 def gcf(first_number, second_number):
     minimum = min(first_number, second_number)
     factors = []
@@ -89,13 +100,14 @@ def gcf(first_number, second_number):
             factors.append(number)
     print(factors[len(factors) - 1])
 
-gcf(20, 50)
+gcf(fn, sn)
 
 time.sleep(3)
 os.system('cls')
 
 # MadLibs
 print('MADLIBS PROJECT\n')
+
 # Request inputs
 verb1 = input('Enter the first (present tense) verb: ')
 verb2 = input('Enter the second (present tense) verb: ')
